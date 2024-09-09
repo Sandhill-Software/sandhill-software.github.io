@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {margin: 0;font-family:Sansation; color: white; background-color: #191919;}
+
+
+a:link {
+	color: #DC143C;
+}
+a:visited {
+	color: #DC143C;
+}
+a:hover {
+	color: #E34363;
+}
+a:active {
+	color: cyan;
+}
+	
+#nav {
+	background-color: #303030;
+	width:100%;
+	box-shadow: 0px 1px 10px #141414;
+	top:0px;
+	position:fixed;
+}
+	
+#logo {
+	float: left; 
+	height: 43px;
+	padding: 2px 15px;
+}
+
+#icon {
+	float: right; 
+	height: 41px;
+	padding: 3px 5px;
+}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0px 10px;
+  overflow: hidden;
+  height: inherit;
+  background-color: #303030;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  padding: 12px 14px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-weight: bold;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 20px;
+  padding: 12px 14px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown .dropbtnactive {
+  font-weight: bold;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 20px;
+  padding: 12px 14px;
+  background-color: #DC143C;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+ul.topnav li a:hover:not(.active), .dropdown:hover .dropbtn {background-color: #111;}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+.dropdown-content a:hover {
+	background-color: #e0e0e0;
+}
+
+.dropdown:hover .dropbtnactive {background-color: #580818;}
+
+ul.topnav li.right {float: right;}
+
+@font-face { font-family: Sansation; src: url('../fonts/Sansation_Regular.ttf'); } 
+
+.box {
+  background-color: #111;
+  margin: 80px auto;
+  width: 60%;
+  padding: 10px 20px;
+}
+ 
+.main {
+  text-align: center;
+  margin: 80px;
+}
+
+.header {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 300px;
+}
+
+.primary {
+	font-weight: bold;
+	font-size: 36px;
+}
+
+footer {
+  text-align: center;
+  font-family: "Courier New", monospace;
+  padding: 40px;
+  font-size: 16px;
+}
+
+</style>
+</head>
+<body>
+
+<div id='nav'>
+	<a href="https://www.sandhill.dev"><img src="../icons/sandhill_logo.png" title="Home" alt="Sandhill Software Logo" id="logo" onmouseover="this.src='../icons/sandhill_logo_hover.png';" onmouseout="this.src='../icons/sandhill_logo.png';"></img></a>
+	<ul class="topnav">
+		<li><a href="https://www.sandhill.dev">Home</a></li>
+		<div class="dropdown">
+			<button class="dropbtn">Games
+				<i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-content">
+				<a href="https://www.sandhill.dev/games/dftp">Don't Forget the Phone</a>
+			</div>
+		</div>
+		<div class="dropdown">
+			<button class="dropbtnactive">Misc.
+				<i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-content">
+				<a href="https://www.sandhill.dev/misc/cranes">Pictures of Cranes</a>
+				<a href="https://www.sandhill.dev/misc/credits">Credits</a>
+			</div>
+		</div> 
+		<li><a href="https://www.sandhill.dev/about">About</a></li>
+		<a href="https://www.youtube.com/@_Sandhill" target="_blank"><img src="../icons/youtube.png" title="YouTube" id="icon" onmouseover="this.src='../icons/youtube_red.png';" onmouseout="this.src='../icons/youtube.png';"></img></a>
+		<a href="https://www.twitter.com/SandhillSof" target="_blank"><img src="../icons/twitter.png" title="Twitter" id="icon" onmouseover="this.src='../icons/twitter_red.png';" onmouseout="this.src='../icons/twitter.png';"></img></a>
+		<a href="#discord"><img src="../icons/discord.png" title="Discord" id="icon" onmouseover="this.src='../icons/discord_red.png';" onmouseout="this.src='../icons/discord.png';"></img></a>
+		<a href="https://www.twitch.tv/Jaxkey_dev" target="_blank"><img src="../icons/twitch.png" title="Twitch" id="icon" onmouseover="this.src='../icons/twitch_red.png';" onmouseout="this.src='../icons/twitch.png';"></img></a>
+	</ul>
+</div>
+	
+
+<div class="box">
+	<h1>Credits</h1>
+	<br>
+	<p>Website created and designed by Jaxkey.</p>
+	<br>
+	<a href="#" target="_blank">Sandhill Software Website Repository</a>
+	<br><br><br><br>
+	<p>Sandhill Software logos created by Jaxkey (for now lol), copyright Sandhill Software.</p>
+	<br>
+	<p>With heavy design inspiration from:</p>
+	<ul>
+		<li><a href="https://bingsoy.com/" target="_blank">bingsoy.com — Bing Soy</a></li>
+		<li><a href="https://www.gopiratesoftware.com/" target="_blank">www.gopiratesoftware.com — Pirate Software</a></li>
+	</ul>
+	<br>
+	<p>Fonts used:</p>
+	<ul>
+		<li><a href="https://www.dafont.com/sansation.font" target="_blank">Sansation</a></li>
+		<li><p style="margin:5px 0;">Courier New (default Windows font)</p></li>
+	</ul>
+	<br>
+	<p>Hosted for free with <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>. (really cool. Give it a look if you are interested in creating your own website!)</p>
+	<p>Domain from <a href="https://porkbun.com/" target="_blank">Porkbun</a>.
+	<br><br><br>
+	<p>Sandhill Software official colors:</p>
+	<ul>
+		<li><p style="margin:5px 0;color:#DC143C">Red — #DC143C</p></li>
+		<li><p style="margin:5px 0;color:#fff">White — #FFFFFF</p></li>
+		<li><!-- Ah! You caught me... The grey is a lie! #191919 is barely visible on this background haha.-->
+		<p style="margin:5px 0;color:#606060;">Grey — #191919</p></li> 
+	</ul>
+	<br>
+
+	
+	
+</div>
+
+<footer>
+	<p>© 2024 Sandhill Software</p>
+</body>
+</html>
+
+

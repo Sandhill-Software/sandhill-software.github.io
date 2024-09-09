@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {margin: 0;font-family:Sansation; color: white; background-color: #191919;}
+
+
+a:link {
+	color: #DC143C;
+}
+a:visited {
+	color: #DC143C;
+}
+a:hover {
+	color: #E34363;
+}
+a:active {
+	color: cyan;
+}
+	
+#nav {
+	background-color: #303030;
+	width:100%;
+	box-shadow: 0px 1px 10px #141414;
+	top:0px;
+	position:fixed;
+}
+	
+#logo {
+	float: left; 
+	height: 43px;
+	padding: 2px 15px;
+}
+
+#icon {
+	float: right; 
+	height: 41px;
+	padding: 3px 5px;
+}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0px 10px;
+  overflow: hidden;
+  height: inherit;
+  background-color: #303030;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  padding: 12px 14px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-weight: bold;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 20px;
+  padding: 12px 14px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown .dropbtnactive {
+  font-weight: bold;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 20px;
+  padding: 12px 14px;
+  background-color: #DC143C;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+ul.topnav li a:hover:not(.active), .dropdown:hover .dropbtn {background-color: #111;}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+.dropdown-content a:hover {
+	background-color: #e0e0e0;
+}
+
+.dropdown:hover .dropbtnactive {background-color: #580818;}
+
+ul.topnav li.right {float: right;}
+
+@font-face { font-family: Sansation; src: url('../fonts/Sansation_Regular.ttf'); } 
+
+.box {
+  background-color: #111;
+  margin: 80px auto;
+  width: 60%;
+  padding: 10px 20px;
+}
+
+.innerbox {
+  background-color: #191919;
+  margin: auto;
+  width: 60%;
+  padding: 5px 10px;
+}
+ 
+.main {
+  text-align: center;
+  margin: 80px;
+}
+
+.header {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 300px;
+}
+
+.primary {
+	font-weight: bold;
+	font-size: 36px;
+}
+
+footer {
+  text-align: center;
+  font-family: "Courier New", monospace;
+  padding: 40px;
+  font-size: 16px;
+}
+
+div.gallery {
+  border: 5px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 30px 50px;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<div id='nav'>
+	<a href="https://www.sandhill.dev"><img src="../icons/sandhill_logo.png" title="Home" alt="Sandhill Software Logo" id="logo" onmouseover="this.src='../icons/sandhill_logo_hover.png';" onmouseout="this.src='../icons/sandhill_logo.png';"></img></a>
+	<ul class="topnav">
+		<li><a href="https://www.sandhill.dev">Home</a></li>
+		<div class="dropdown">
+			<button class="dropbtn">Games
+				<i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-content">
+				<a href="https://www.sandhill.dev/games/dftp">Don't Forget the Phone</a>
+			</div>
+		</div>
+		<div class="dropdown">
+			<button class="dropbtnactive">Misc.
+				<i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-content">
+				<a href="https://www.sandhill.dev/misc/cranes">Pictures of Cranes</a>
+				<a href="https://www.sandhill.dev/misc/credits">Credits</a>
+			</div>
+		</div> 
+		<li><a href="https://www.sandhill.dev/about">About</a></li>
+		<a href="https://www.youtube.com/@_Sandhill" target="_blank"><img src="../icons/youtube.png" title="YouTube" id="icon" onmouseover="this.src='../icons/youtube_red.png';" onmouseout="this.src='../icons/youtube.png';"></img></a>
+		<a href="https://www.twitter.com/SandhillSof" target="_blank"><img src="../icons/twitter.png" title="Twitter" id="icon" onmouseover="this.src='../icons/twitter_red.png';" onmouseout="this.src='../icons/twitter.png';"></img></a>
+		<a href="#discord"><img src="../icons/discord.png" title="Discord" id="icon" onmouseover="this.src='../icons/discord_red.png';" onmouseout="this.src='../icons/discord.png';"></img></a>
+		<a href="https://www.twitch.tv/Jaxkey_dev" target="_blank"><img src="../icons/twitch.png" title="Twitch" id="icon" onmouseover="this.src='../icons/twitch_red.png';" onmouseout="this.src='../icons/twitch.png';"></img></a>
+	</ul>
+</div>
+
+<div class="box">
+	<a target="_blank" href="https://www.allaboutbirds.org/guide/Sandhill_Crane/overview">
+		<h1 style="text-align: center;">Sandhill Crane</h1>
+	</a>
+	<div class="innerbox">
+		<p style="text-align: center;">The Sandhill Software namesake comes from the Sandhill Crane, a species of large crane from North America.</p>
+	</div><br>
+	
+	<div class="gallery">
+		<img src="https://cdn.download.ams.birds.cornell.edu/api/v2/asset/44033131/1200">
+		<div class="desc">© Edward Plumer</div>
+	</div>
+	<div class="gallery">
+		<img src="https://cdn.download.ams.birds.cornell.edu/api/v2/asset/192546241/1200" >
+		<div class="desc">© Andrew Simon</div>
+	</div>
+	<div class="gallery">
+		<img src="https://cdn.download.ams.birds.cornell.edu/api/v2/asset/305597181/1200">
+		<div class="desc">© Dorian Anderson</div>
+	</div>
+	<div class="gallery">
+		<img src="https://cdn.download.ams.birds.cornell.edu/api/v2/asset/309666411/1200">
+		<div class="desc">© Matt Felperin</div>
+	</div>
+	<div class="gallery">
+		<img src="https://cdn.download.ams.birds.cornell.edu/api/v2/asset/172832401/1200">
+		<div class="desc">© Dominic Garcia-Hall</div>
+	</div>
+	<div class="gallery">
+		<img src="https://cdn.download.ams.birds.cornell.edu/api/v2/asset/616818329/1200">
+		<div class="desc">© Anne Inga</div>
+	</div>
+	<div class="gallery">
+		<img src="https://cdn.download.ams.birds.cornell.edu/api/v2/asset/253651601/1200">
+		<div class="desc">© Stephen Hurst</div>
+	</div>
+	<div class="gallery">
+		<img src="https://cdn.download.ams.birds.cornell.edu/api/v2/asset/29917251/1200">
+		<div class="desc">© John Reynolds</div>
+	</div>
+	<div class="gallery">
+		<img src="../images/IMG_2174.JPG">
+		<div class="desc">Photo by Jaxkey. CC0</div>
+	</div>
+	
+	
+</div>
+
+<footer>
+	<p>© 2024 Sandhill Software</p>
+</body>
+</html>
+
+

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  margin: 0;
+  font-family: Sansation;
+  color: white;
+  background-color: #191919;
+}
+
+#nav {
+  background-color: #303030;
+  width: 100%;
+  box-shadow: 0px 1px 10px #141414;
+  top: 0px;
+  position: fixed;
+}
+
+#logo {
+  float: left; 
+  height: 43px;
+  padding: 2px 15px;
+}
+
+#icon {
+  float: right; 
+  height: 41px;
+  padding: 3px 5px;
+}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0px 10px;
+  overflow: hidden;
+  height: inherit;
+  background-color: #303030;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  padding: 12px 14px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+ul.topnav2 {
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: inherit;
+  background-color: #000000;
+}
+
+ul.topnav2 li {display: inline-block;}
+
+ul.topnav2 li a {
+  display: inline-block;
+  color: white;
+  font-size: 18px;
+  padding: 8px 10px;
+  text-decoration: none;
+}
+
+ul.topnav li a i {
+  margin-left: 2px; /* Adjust the space between the text and icon */
+  vertical-align: middle; /* Align the icon vertically with the text */
+  font-size: 18px;
+}
+
+ul.topnav2 li a:hover {
+  background-color: #DC143C;
+}
+
+ul.topnav2 .dropdown {
+  display: inline-block;
+}
+
+ul.topnav2 .dropdown .dropbtn {
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 18px;
+  padding: 8px 10px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+ul.topnav2 .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+ul.topnav2 .dropdown-content a {
+  float: none;
+  color: black;
+  padding: 10px 12px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+ul.topnav2 .dropdown:hover .dropbtn {background-color: #DC143C;}
+
+ul.topnav li a:hover:not(.active), .dropdown:hover .dropbtn {background-color: #111;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: #e0e0e0;
+}
+
+ul.topnav li a.active {background-color: #DC143C;}
+ul.topnav li a.active:hover {background-color: #580818;}
+
+ul.topnav li.right {float: right;}
+
+@font-face {
+  font-family: Sansation;
+  src: url('../fonts/Sansation_Regular.ttf');
+} 
+
+h1 {
+  font-family: Sansation;
+}
+
+.titleblock {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 200px;
+}
+
+.textbox {
+  color: #FFFFFF;
+  text-align: justify;
+  font-size: 22px;
+  width: 40%;
+  margin: auto;
+  border-style: solid;
+  border-color: #fff;
+  border-width: 5px;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.youtube {
+  width: 640px;
+  height: 360px;
+  border-radius: 10px;
+}
+
+iframe.youtube {
+  padding: 0;
+  border-style: ridge;
+  border-color: #fff;
+  border-width: 5px;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 60px;
+}
+
+.content-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 150px;
+  width: 100%;
+  gap: 50px;
+}
+
+.content-block:last-child {
+  margin-bottom: 50px; /* Reduced margin-bottom */
+}
+
+.playlist-container + h2 {
+  width: 30%;
+  text-align: justify;
+  font-size: 20px;
+  margin: 0; /* Ensure no margin between the text and the edge of the container */
+  word-break: break-word; /* Break long words */
+}
+
+.video-container {
+  text-align: center; /* Center align the contents of the container */
+}
+
+.playlist-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.playlist-text {
+  margin-top: 10px; /* Add some space between the video and the text */
+  text-align: center;
+  font-size: 18px;
+}
+
+
+.episode-content {
+  display: flex;
+  justify-content: center;
+  gap: 50px; /* Space between video and description */
+}
+
+.title-video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60%; /* Set the width for video and title block */
+  margin-bottom: 20px;
+}
+
+.title-video h1 {
+  text-align: center;
+  margin-bottom: 20px; /* Space between the title and video */
+}
+
+.episode-description {
+  text-align: justify;
+  margin-top: 100px;
+  font-weight: initial;
+}
+
+.box {
+  background-color: #111;
+  margin: auto auto;
+  width: 70%;
+  padding: 10px 60px;
+  border: 10px solid white;
+  border-style: ridge;
+  margin-bottom: 100px;
+}
+
+.header {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 80%;
+  width: 50%;
+}
+
+footer {
+  text-align: center;
+  font-family: "Courier New", monospace;
+  padding: 40px;
+  font-size: 16px;
+}
+
+
+</style>
+</head>
+<body>
+<header>
+  <div id='nav'>
+    <a href="https://www.sandhill.dev"><img src="../icons/sandhill_logo.png" title="Home" alt="Sandhill Software Logo" id="logo" onmouseover="this.src='../icons/sandhill_logo_hover.png';" onmouseout="this.src='../icons/sandhill_logo.png';"></img></a>
+    <ul class="topnav">
+      <li><a href="https://www.sandhill.dev/games/dftp">DFtP</a></li>
+      <li><a class="active" href="https://www.sandhill.dev/games/dftp/devlogs">Dev Logs</a></li>
+      <li><a href="https://www.sandhill.dev/games/dftp/faq">FAQ</a></li>
+      <li><a href="https://store.steampowered.com/app/698780/Doki_Doki_Literature_Club/" target="_blank">Download <i class="fa fa-external-link"></i></a></li>
+      <a href="https://www.youtube.com/@_Sandhill" target="_blank"><img src="../icons/youtube.png" title="YouTube" id="icon" onmouseover="this.src='../icons/youtube_red.png';" onmouseout="this.src='../icons/youtube.png';"></img></a>
+      <a href="https://www.twitter.com/SandhillSof" target="_blank"><img src="../icons/twitter.png" title="Twitter" id="icon" onmouseover="this.src='../icons/twitter_red.png';" onmouseout="this.src='../icons/twitter.png';"></img></a>
+      <a href="#discord"><img src="../icons/discord.png" title="Discord" id="icon" onmouseover="this.src='../icons/discord_red.png';" onmouseout="this.src='../icons/discord.png';"></img></a>
+      <a href="https://www.twitch.tv/Jaxkey_dev" target="_blank"><img src="../icons/twitch.png" title="Twitch" id="icon" onmouseover="this.src='../icons/twitch_red.png';" onmouseout="this.src='../icons/twitch.png';"></img></a>
+    </ul>
+    <ul class="topnav2">
+      <li><a href="https://www.sandhill.dev">Home</a></li>
+      <div class="dropdown">
+        <button class="dropbtn">Games
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="https://www.sandhill.dev/games/dftp">Don't Forget the Phone</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Misc.
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="https://www.sandhill.dev/misc/cranes">Pictures of Cranes</a>
+          <a href="https://www.sandhill.dev/misc/credits">Credits</a>
+        </div>
+      </div>
+      <li><a href="https://www.sandhill.dev/about">About</a></li>
+    </ul>
+  </div>
+</header>
+
+<div class="content-container">
+  <div class="content-block">
+      <div class="playlist-container">
+          <iframe class="youtube" src="https://www.youtube.com/embed/videoseries?si=YCJd9mPPh9aSaz6P&amp;list=PLBpeFqONLo-Askkd5BonbfAta19tQPNnU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <p class="playlist-text">↑ Full Playlist ↑</p>
+      </div>
+      <h2>Watch the Dev Logs highlighting the entire 
+          process of creating Don’t Forget the Phone 
+          from conceptualization all the way to the 
+          final product!
+      </h2>
+  </div>
+</div>
+
+    <div class="box">
+      <div class="episode-content">
+          <div class="title-video">
+              <h1>Episode #1</h1>
+              <iframe class="youtube" src="https://www.youtube.com/embed/NHvUxxrDcX0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <h2 class="episode-description">
+            Watch the Dev Logs highlighting the entire 
+            process of creating Don’t Forget the Phone 
+            from conceptualization all the way to the 
+            final product!
+          </h2>
+      </div>
+  </div>
+  <div class="box">
+    <div class="episode-content">
+        <div class="title-video">
+            <h1>Episode #2</h1>
+            <iframe class="youtube" src="https://www.youtube.com/embed/NHvUxxrDcX0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <h2 class="episode-description">
+          Watch the Dev Logs highlighting the entire 
+          process of creating Don’t Forget the Phone 
+          from conceptualization all the way to the 
+          final product!
+        </h2>
+    </div>
+</div>
+  <div class="box">
+      <div class="episode-content">
+          <div class="title-video">
+              <h1>Episode #3</h1>
+              <iframe class="youtube" src="https://www.youtube.com/embed/NHvUxxrDcX0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <h2 class="episode-description">
+            Watch the Dev Logs highlighting the entire 
+            process of creating Don’t Forget the Phone 
+            from conceptualization all the way to the 
+            final product!
+          </h2>
+      </div>
+  </div>
+</div>
+
+
+</div>
+  
+</div>
+<div class="titleblock">
+	<h2>Watch me make games live!</h2>
+</div>
+<div class="textbox" style="width:960px;">
+<!-- Add a placeholder for the Twitch embed -->
+    <div id="twitch-embed"></div>
+
+    <!-- Load the Twitch embed JavaScript file -->
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
+    <script type="text/javascript">
+      new Twitch.Embed("twitch-embed", {
+        width: 960,
+        height: 540,
+        channel: "jaxkey_dev",
+        // Only needed if this page is going to be embedded on other websites
+        parent: ["sandhill.dev"]
+      });
+    </script>
+
+</div>
+
+<footer>
+	<p>© 2024 Sandhill Software</p>
+</footer>
+</body>
+</html>

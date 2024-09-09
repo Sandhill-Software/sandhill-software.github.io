@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {margin: 0;font-family:Sansation; color: white; background-color: #191919;}
+
+#nav {
+	background-color: #303030;
+	width:100%;
+	box-shadow: 0px 1px 10px #141414;
+	top:0px;
+	position:fixed;
+}
+	
+#logo {
+	float: left; 
+	height: 43px;
+	padding: 2px 15px;
+}
+
+#icon {
+	float: right; 
+	height: 41px;
+	padding: 3px 5px;
+}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0px 10px;
+  overflow: hidden;
+  height: inherit;
+  background-color: #303030;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  padding: 12px 14px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-weight: bold;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 20px;
+  padding: 12px 14px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+ul.topnav li a:hover:not(.active), .dropdown:hover .dropbtn {background-color: #111;}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+.dropdown-content a:hover {
+	background-color: #e0e0e0;
+}
+
+ul.topnav li a.active {background-color: #DC143C;}
+ul.topnav li a.active:hover {background-color: #580818;}
+
+ul.topnav li.right {float: right;}
+
+@font-face { font-family: Sansation; src: url('fonts/Sansation_Regular.ttf'); } 
+      h1 {
+         font-family: Sansation
+      }
+	  
+	  
+.titleblock {
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+
+.textbox {
+  color: #FFFFFF;
+  text-align: justify;
+  font-size: 22px;
+  width: 40%;
+  margin: auto;
+  border-style: solid;
+  border-color: #fff;
+  border-width: 5px;
+  border-radius: 10px;
+  padding: 15px;
+ }
+ 
+.main {
+  text-align: center;
+  margin: 150px;
+}
+
+.header {
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 80%;
+  width: 50%;
+}
+
+footer {
+  text-align: center;
+  font-family: "Courier New", monospace;
+  padding: 40px;
+  font-size: 16px;
+}
+
+
+</style>
+</head>
+<body>
+
+<div id='nav'>
+	<a href="https://www.sandhill.dev"><img src="icons/sandhill_logo.png" title="Home" alt="Sandhill Software Logo" id="logo" onmouseover="this.src='icons/sandhill_logo_hover.png';" onmouseout="this.src='icons/sandhill_logo.png';"></img></a>
+	<ul class="topnav">
+		<li><a class="active" href="https://www.sandhill.dev">Home</a></li>
+		<div class="dropdown">
+			<button class="dropbtn">Games
+				<i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-content">
+				<a href="https://www.sandhill.dev/games/dftp">Don't Forget the Phone</a>
+			</div>
+		</div>
+		<div class="dropdown">
+			<button class="dropbtn">Misc.
+				<i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-content">
+				<a href="https://www.sandhill.dev/misc/cranes">Pictures of Cranes</a>
+				<a href="https://www.sandhill.dev/misc/credits">Credits</a>
+			</div>
+		</div> 
+		<li><a href="https://www.sandhill.dev/about">About</a></li>
+		<a href="https://www.youtube.com/@_Sandhill" target="_blank"><img src="icons/youtube.png" title="YouTube" id="icon" onmouseover="this.src='icons/youtube_red.png';" onmouseout="this.src='icons/youtube.png';"></img></a>
+		<a href="https://www.twitter.com/SandhillSof" target="_blank"><img src="icons/twitter.png" title="Twitter" id="icon" onmouseover="this.src='icons/twitter_red.png';" onmouseout="this.src='icons/twitter.png';"></img></a>
+		<a href="#discord"><img src="icons/discord.png" title="Discord" id="icon" onmouseover="this.src='icons/discord_red.png';" onmouseout="this.src='icons/discord.png';"></img></a>
+		<a href="https://www.twitch.tv/Jaxkey_dev" target="_blank"><img src="icons/twitch.png" title="Twitch" id="icon" onmouseover="this.src='icons/twitch_red.png';" onmouseout="this.src='icons/twitch.png';"></img></a>
+	</ul>
+</div>
+
+<div class="main">
+  <img src="icons/banner_logo.png" class="header"></img>
+</div>
+<br></br><br></br><br></br><br></br><br></br><br></br>
+<div class="titleblock">
+	<h2>Watch me make games live!</h2>
+</div>
+<div class="textbox" style="width:960px;">
+<!-- Add a placeholder for the Twitch embed -->
+    <div id="twitch-embed"></div>
+
+    <!-- Load the Twitch embed JavaScript file -->
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
+    <script type="text/javascript">
+      new Twitch.Embed("twitch-embed", {
+        width: 960,
+        height: 540,
+        channel: "jaxkey_dev",
+        // Only needed if this page is going to be embedded on other websites
+        parent: ["sandhill.dev"]
+      });
+    </script>
+
+</div>
+
+<footer>
+	<p>© 2024 Sandhill Software</p>
+</body>
+</html>
+
+
