@@ -25,7 +25,7 @@ const Contact = () => {
         <p>For technical support, bug reports, or help with our games, please email <a href="mailto:support@sandhill.dev">support@sandhill.dev</a>.</p>
         
         <h2>Business Inquiries</h2>
-        <p>If you're looking to reach out for any of the following, please email <a href="mailto:buisness@sandhill.dev">buisness@sandhill.dev</a>:</p>
+        <p>If you're looking to reach out for any of the following, please email <a href="mailto:business@sandhill.dev">business@sandhill.dev</a>:</p>
         <ul>
           <li>Business or partnership proposals</li>
           <li>Collaboration opportunities (merch, events, or other creative avenues)</li>
